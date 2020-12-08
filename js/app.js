@@ -29,9 +29,9 @@ clipboardEl.addEventListener('click', () => {
 })
 
 generateEl.addEventListener('click', () => {
-    const length = +lengthEl.value
-    const hasLower = lowercaseEl.checked
-    const hasUpper = uppercaseEl.checked
+    const length    = +lengthEl.value
+    const hasLower  = lowercaseEl.checked
+    const hasUpper  = uppercaseEl.checked
     const hasNumber = numbersEl.checked
     const hasSymbol = symbolsEl.checked
 
@@ -39,9 +39,9 @@ generateEl.addEventListener('click', () => {
 })
 
 function generatePassword(lower, upper, number, symbol, length) {
-    let generatedPassword = ''
-    const typesCount = lower + upper + number + symbol
-    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0])
+    let generatedPassword   = ''
+    const typesCount        = lower + upper + number + symbol
+    const typesArr          = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0])
     
     if(typesCount === 0) {
         return ''
@@ -49,8 +49,8 @@ function generatePassword(lower, upper, number, symbol, length) {
 
     for(let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
-            const funcName = Object.keys(type)[0]
-            generatedPassword += randomFunc[funcName]()
+            const funcName      = Object.keys(type)[0]
+            generatedPassword   += randomFunc[funcName]()
         })
     }
 
