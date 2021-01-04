@@ -7,6 +7,23 @@ const symbolsEl     = document.getElementById('symbols');
 const generateEl    = document.getElementById('generate');
 const clipboardEl   = document.getElementById('clipboard');
 
+const getRandomLower = () => {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
+const getRandomUpper = () => {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+const getRandomNumber = () => {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+const getRandomSymbol = () => {
+    const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/'
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
@@ -35,7 +52,46 @@ generateEl.addEventListener('click', () => {
     const hasNumber = numbersEl.checked;
     const hasSymbol = symbolsEl.checked;
 
-    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    if(length <= 4 && hasUpper != true && hasNumber != true && hasSymbol != true){
+        document.getElementById("strength").innerHTML = "Password Strength: Weak";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length > 4 && length < 8 && hasUpper != true && hasNumber != true && hasSymbol != true){
+        document.getElementById("strength").innerHTML = "Password Strength: Weak";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != true){
+        document.getElementById("strength").innerHTML = "Password Strength: Not good";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != true){
+        document.getElementById("strength").innerHTML = "Password Strength: Moderate";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != true){
+        document.getElementById("strength").innerHTML = "Password Strength: Moderate";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != false){
+        document.getElementById("strength").innerHTML = "Password Strength: Good";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != true){
+        document.getElementById("strength").innerHTML = "Password Strength: Very good";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != false){
+        document.getElementById("strength").innerHTML = "Password Strength: Very good";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != false){
+        document.getElementById("strength").innerHTML = "Password Strength: Very good";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
+    else if(length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != false){
+        document.getElementById("strength").innerHTML = "Password Strength: Excellent";
+        resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    }
 })
 
 const generatePassword = (lower, upper, number, symbol, length) => {
@@ -57,21 +113,4 @@ const generatePassword = (lower, upper, number, symbol, length) => {
     const finalPassword = generatedPassword.slice(0, length);
 
     return finalPassword;
-}
-
-const getRandomLower = () => {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-
-const getRandomUpper = () => {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-const getRandomNumber = () => {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-const getRandomSymbol = () => {
-    const symbols = '!@#$%^&*(){}[]=<>/,.'
-    return symbols[Math.floor(Math.random() * symbols.length)];
 }
