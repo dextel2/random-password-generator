@@ -146,3 +146,30 @@ const generatePassword = (lower, upper, number, symbol, length) => {
 
     return finalPassword;
 }
+
+let toggler = document.getElementById("toggler");
+toggler.addEventListener("click", () => {
+  let toggle_white_button = document.getElementById("round");
+  let icon_toggle_moon = document.querySelector(".moon");
+  let icon_toggle_sun = document.querySelector(".sun");
+  let body = document.querySelector("body");
+  let main_container = document.querySelector(".container");
+  let main_heading = document.querySelector("h2");
+  let label1 = document.querySelector('.label1');
+  let label2 = document.querySelector('.label2');
+  let label3 = document.querySelector('.label3');
+  let label4 = document.querySelector('.label4');
+  let label5 = document.querySelector('.label5');
+
+  toggle_white_button.classList.toggle('toggle');
+  icon_toggle_moon.classList.toggle('show');
+  icon_toggle_sun.classList.toggle('hide');
+  body.classList.toggle('dark_mode');
+  main_container.classList.toggle('dark');
+  main_heading.classList.toggle('dark_text');
+  label1.classList.toggle('dark_text_for_label');
+  label2.classList.toggle('dark_text_for_label');
+  label3.classList.toggle('dark_text_for_label');
+  label4.classList.toggle('dark_text_for_label');
+  label5.classList.toggle('dark_text_for_label');
+});
