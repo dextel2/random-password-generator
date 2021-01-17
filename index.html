@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/darkmode.css" />
+    <title>Random Password Generator</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Random Password Generator</title>
-</head>
+  <body>
+    <div class="toggle_container">
+      <img src="./assets/moon.svg" alt="" class="moon" />
+      <span id="toggler"><div id="round"></div></span>
 
-<body>
-  <div class="container">
-    <h2>Password Generator</h2>
-    <div class="result-container">
-      <span id="result"></span>
-      <button class="btn" id="clipboard">
-        <i class="far fa-clipboard"></i>
-      </button>
+      <img src="./assets/sun.svg" alt="" class="sun" />
     </div>
-    <div class="settings">
-      <div class="setting">
-        <label>Password Length</label>
-        <input type="number" id="length" min="4" max="20" value="20">
-      </div>
-      <div class="setting">
-        <label>Include uppercase letters</label>
-        <input type="checkbox" id="uppercase" checked>
-      </div>
-      <div class="setting">
-        <label>Include lowercase letters</label>
-        <input type="checkbox" id="lowercase" checked>
-      </div>
-      <div class="setting">
-        <label>Include numbers</label>
-        <input type="checkbox" id="numbers" checked>
-      </div>
-      <div class="setting">
-        <label>Include symbols</label>
-        <input type="checkbox" id="symbols" checked>
-      </div>
-    </div>
-    <div id="strength">
-      Password Strength:
-    </div>
-    <button class="btn btn-large" id="generate">
-      Generate Password
-    </button>
-  </div>
-  <script src="./js/app.js"></script>
-</body>
 
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="result-container">
+        <span id="result"></span>
+        <button class="btn" id="clipboard">
+          <i class="far fa-clipboard"></i>
+        </button>
+      </div>
+      <div class="settings">
+        <div class="setting">
+          <label class="label1">Password Length</label>
+          <input type="number" id="length" min="4" max="20" value="20" />
+        </div>
+        <div class="setting">
+          <label class="label2">Include uppercase letters</label>
+          <input type="checkbox" id="uppercase" checked />
+        </div>
+        <div class="setting">
+          <label class="label3">Include lowercase letters</label>
+          <input type="checkbox" id="lowercase" checked />
+        </div>
+        <div class="setting">
+          <label class="label4">Include numbers</label>
+          <input type="checkbox" id="numbers" checked />
+        </div>
+        <div class="setting">
+          <label class="label5">Include symbols</label>
+          <input type="checkbox" id="symbols" checked />
+        </div>
+      </div>
+      <div id="strength">Password Strength:</div>
+      <button class="btn btn-large" id="generate">Generate Password</button>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
