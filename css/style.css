@@ -18,6 +18,107 @@ body {
   padding: 10px;
 }
 
+body.dark_mode {
+  background: #363655;
+  transition: 0.6s ease;
+}
+
+#toggler {
+  position: relative;
+  height: 45px;
+  width: 85px;
+  border-radius: 20px;
+  background: linear-gradient(60deg, #363655, #7979ca);
+  cursor: pointer;
+}
+.toggle_container {
+  /* background: red; */
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 55px;
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#round {
+  position: absolute;
+  top: 50%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background: #f4f4f8;
+  transition: 0.6s ease;
+}
+
+#round.toggle {
+  left: 30%;
+  transition: 0.6s ease;
+}
+
+.sun {
+  height: 40px;
+  visibility: visible;
+  transition: 0.2s ease-in;
+}
+.sun.hide {
+  visibility: hidden;
+  transition: 0.2s ease-in;
+}
+.moon {
+  height: 35px;
+  visibility: hidden;
+  transition: 0.2s ease-in;
+}
+.moon.show {
+  visibility: visible;
+  transition: 0.2s ease-in;
+}
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+  transition: 0.6s ease;
+}
+h2.dark_text {
+  color: #363655;
+  transition: 0.6s ease;
+}
+
+.label1,
+.label2,
+.label3,
+.label4,
+.label5 {
+  transition: 0.6s ease;
+}
+.label1.dark_text_for_label {
+  color: #363655;
+  transition: 0.6s ease;
+}
+
+.label2.dark_text_for_label {
+  color: #363655;
+  transition: 0.6s ease;
+}
+
+.label3.dark_text_for_label {
+  color: #363655;
+  transition: 0.6s ease;
+}
+
+.label4.dark_text_for_label {
+  color: #363655;
+  transition: 0.6s ease;
+}
+
+.label5.dark_text_for_label {
+  color: #363655;
+  transition: 0.6s ease;
+}
+
 h2 {
   margin: 10px 0 20px;
   text-align: center;
@@ -31,6 +132,11 @@ h2 {
   padding: 20px;
   width: 350px;
   max-width: 100%;
+}
+
+
+.container.dark {
+  background: #d5d5ff;
 }
 
 .result-container {
