@@ -176,6 +176,7 @@ h2 {
   font-size: 16px;
   padding: 8px 12px;
   cursor: pointer;
+  outline: none;
 }
 
 .btn-large {
@@ -205,4 +206,36 @@ h2 {
   border: 1px transparent;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.NA{
+  border: 3px solid #ffffff !important;
+}
+
+.Very_Bad{
+  border: 3px solid #c70039 !important;
+}
+
+.Weak{
+  border: 3px solid #ef4f4f !important;
+}
+
+.Not_Good{
+  border: 3px solid #e4e978 !important;
+}
+
+.Moderate{
+  border: 3px solid #f2d974 !important;
+}
+
+.Good{
+  border: 3px solid #bac964 !important;
+}
+
+.Very_Good{
+  border: 3px solid #28df99 !important;
+}
+
+.Excellent{
+  border: 3px solid #158467 !important;
 }
