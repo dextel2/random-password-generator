@@ -55,77 +55,220 @@ generateEl.addEventListener('click', () => {
     if (length <= 4) {
         document.getElementById("strength").innerHTML = "Password Strength: Very bad";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length > 4 && length < 8) {
         document.getElementById("strength").innerHTML = "Password Strength: Weak";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Weak');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Excellent";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Excellent');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Very_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Very_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Very_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Moderate";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Moderate');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Very_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Not_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Not_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Not_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('Not_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
+        document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: --";
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+        document.getElementById("strength").classList.add('NA');
+        document.getElementById("strength").classList.remove('Not_Good');
+        document.getElementById("strength").classList.remove('Very_Bad');
+        document.getElementById("strength").classList.remove('Weak');
+        document.getElementById("strength").classList.remove('Moderate');
+        document.getElementById("strength").classList.remove('Good');
+        document.getElementById("strength").classList.remove('Very_Good');
+        document.getElementById("strength").classList.remove('Excellent');
     }
 })
-
 const generatePassword = (lower, upper, number, symbol, length) => {
     let generatedPassword = '';
     const typesCount = lower + upper + number + symbol;
