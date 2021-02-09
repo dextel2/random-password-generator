@@ -20,7 +20,7 @@ const getRandomNumber = () => {
 }
 
 const getRandomSymbol = () => {
-    const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/'
+    const symbols = '!@#$%^&*_.?'
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
@@ -54,6 +54,10 @@ generateEl.addEventListener('click', () => {
 
     if (length <= 4) {
         document.getElementById("strength").innerHTML = "Password Strength: Very bad";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.remove("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Very_Bad');
         document.getElementById("strength").classList.remove('Weak');
@@ -66,6 +70,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length > 4 && length < 8) {
         document.getElementById("strength").innerHTML = "Password Strength: Weak";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.remove("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Weak');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -78,6 +86,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Excellent";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.add("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Excellent');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -90,6 +102,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Very_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -102,6 +118,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -114,6 +134,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Very_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -126,6 +150,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Very_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -138,6 +166,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != false && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -150,6 +182,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -162,6 +198,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != false && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -174,6 +214,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -185,7 +229,11 @@ generateEl.addEventListener('click', () => {
         document.getElementById("strength").classList.remove('NA');
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != true && hasLower != false) {
-        document.getElementById("strength").innerHTML = "Password Strength: Moderate";
+        document.getElementById("strength").innerHTML = "Password Strength: Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Moderate');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -198,6 +246,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Very Good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.add("orangeyellow");
+        document.getElementById("strengthgood").classList.add("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Very_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -210,6 +262,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != true && hasLower != false) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.remove("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Not_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -222,6 +278,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != true && hasNumber != true && hasSymbol != false && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.remove("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Not_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -234,6 +294,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != true && hasNumber != false && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.remove("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Not_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
@@ -246,6 +310,10 @@ generateEl.addEventListener('click', () => {
     }
     else if (length >= 8 && hasUpper != false && hasNumber != true && hasSymbol != true && hasLower != true) {
         document.getElementById("strength").innerHTML = "Password Strength: Not good";
+        document.getElementById("strengthlow").classList.add("redorange");
+        document.getElementById("strengthmedium").classList.remove("orangeyellow");
+        document.getElementById("strengthgood").classList.remove("yellowlightgreen");
+        document.getElementById("strengthexcellent").classList.remove("lightgreentogreen");
         resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
         document.getElementById("strength").classList.add('Not_Good');
         document.getElementById("strength").classList.remove('Very_Bad');
