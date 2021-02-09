@@ -203,13 +203,55 @@ h2 {
 #strength{
   background-color: rgba(0, 0, 0, 0.4);
   padding: 10px 5px;
-  border: 1px transparent;
+  border: 3px solid rgba(35, 35, 35, 0.4);
   border-radius: 5px;
   margin-bottom: 20px;
 }
+#meter{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0px;
+}
+#strengthlow{
+  width: 25%;
+  background-color: #363655;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  padding: 7px;
+}
+#strengthmedium{
+  width: 25%;
+  background-color: #363655;
+  padding: 7px;
+}
+#strengthgood{
+  width: 25%;
+  background-color: #363655;
+  padding: 7px;
+}
+#strengthexcellent{
+  width: 25%;
+  background-color: #363655;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 7px;
+}
+.redorange{
+  background: linear-gradient(90deg, red, orange);
+}
+.orangeyellow{
+  background: linear-gradient(90deg, orange, yellow);
+}
+.yellowlightgreen{
+  background: linear-gradient(90deg, yellow, lightgreen);
+}
+.lightgreentogreen{
+  background: linear-gradient(90deg, lightgreen, green);
+}
 
 .NA{
-  border: 3px solid #ffffff !important;
+  border: 3px transparent !important;
 }
 
 .Very_Bad{
